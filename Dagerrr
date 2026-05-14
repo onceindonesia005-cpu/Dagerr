@@ -1,0 +1,241 @@
+export default function DagerrPortfolio() {
+  const youtubeVideos = [
+    {
+      title: "YouTube Shorts Showcase",
+      link: "https://www.youtube.com/shorts/kNouBI6AICQ",
+      thumbnail: "https://i.ytimg.com/vi/kNouBI6AICQ/maxresdefault.jpg",
+    },
+    {
+      title: "Gaming Cinematic Edit",
+      link: "https://www.youtube.com/@Dagerrrrrrrr",
+      thumbnail: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1200&auto=format&fit=crop",
+    },
+  ];
+
+  const tiktokVideos = [
+    {
+      title: "1 Million Views TikTok Edit",
+      link: "https://www.tiktok.com/@dagerr02/video/7629050645424704776?is_from_webapp=1&sender_device=pc&web_id=7639757484844828178",
+      thumbnail: "https://p16-sign-va.tiktokcdn.com/tos-maliva-p-0068/oYJfA0B9iGQeA1C4nE2DkBf3aR.jpg",
+    },
+    {
+      title: "Cozy Gaming Montage",
+      link: "https://www.tiktok.com/@dagerr02",
+      thumbnail: "https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?q=80&w=1200&auto=format&fit=crop",
+    },
+  ];
+
+  return (
+    <div className="min-h-screen bg-black text-white font-sans overflow-hidden">
+      {/* Background Glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(0,255,255,0.18),transparent_40%),radial-gradient(circle_at_bottom,rgba(168,85,247,0.18),transparent_40%)]" />
+
+      {/* Hero Section */}
+      <section className="relative z-10 px-6 py-24 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <p className="uppercase tracking-[0.3em] text-cyan-400 text-sm mb-4">
+              Video Editor • Content Creator
+            </p>
+
+            <h1 className="text-5xl md:text-7xl font-black leading-tight mb-6">
+              DAGERR
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+                EDIT WORK
+              </span>
+            </h1>
+
+            <p className="text-gray-300 text-lg leading-relaxed max-w-xl mb-8">
+              Professional gaming & cinematic editor with cozy modern style.
+              Creating YouTube videos, TikTok shorts, livestream visuals,
+              and storytelling edits with smooth transitions and immersive atmosphere.
+            </p>
+
+            <div className="flex flex-wrap gap-4">
+              <a
+                href="https://www.youtube.com/@Dagerrrrrrrr"
+                target="_blank"
+                className="px-6 py-3 rounded-2xl bg-cyan-500 hover:scale-105 transition-all duration-300 font-semibold shadow-lg shadow-cyan-500/30"
+              >
+                YouTube Channel
+              </a>
+
+              <a
+                href="https://www.tiktok.com/@dagerr02"
+                target="_blank"
+                className="px-6 py-3 rounded-2xl border border-purple-500 hover:bg-purple-500/20 transition-all duration-300 font-semibold"
+              >
+                TikTok Profile
+              </a>
+            </div>
+          </div>
+
+          <div className="relative">
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-purple-500/20 blur-3xl rounded-full" />
+
+            <div className="relative bg-white/5 border border-white/10 rounded-[32px] p-6 backdrop-blur-xl shadow-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1545239351-1141bd82e8a6?q=80&w=1400&auto=format&fit=crop"
+                alt="Editing Setup"
+                className="rounded-3xl w-full h-[420px] object-cover"
+              />
+
+              <div className="mt-6 grid grid-cols-3 gap-4 text-center">
+                <div className="bg-black/40 rounded-2xl p-4">
+                  <h3 className="text-3xl font-bold text-cyan-400">50+</h3>
+                  <p className="text-gray-400 text-sm">Projects</p>
+                </div>
+
+                <div className="bg-black/40 rounded-2xl p-4">
+                  <h3 className="text-3xl font-bold text-purple-400">4K</h3>
+                  <p className="text-gray-400 text-sm">Editing</p>
+                </div>
+
+                <div className="bg-black/40 rounded-2xl p-4">
+                  <h3 className="text-3xl font-bold text-cyan-400">24/7</h3>
+                  <p className="text-gray-400 text-sm">Creative</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* YouTube Section */}
+      <section className="relative z-10 px-6 py-20 max-w-7xl mx-auto">
+        <div className="flex items-center justify-between mb-10">
+          <div>
+            <h2 className="text-4xl font-bold">YouTube Showcase</h2>
+            <p className="text-gray-400 mt-2">
+              Long-form editing, cinematic storytelling & gaming content.
+            </p>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {youtubeVideos.map((video, index) => (
+            <a
+              key={index}
+              href={video.link}
+              target="_blank"
+              className="group bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:scale-[1.02] transition-all duration-300"
+            >
+              <div className="overflow-hidden">
+                <img
+                  src={video.thumbnail}
+                  alt={video.title}
+                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+
+              <div className="p-6">
+                <h3 className="text-2xl font-bold mb-2">{video.title}</h3>
+                <p className="text-gray-400">
+                  Watch my YouTube Shorts editing showcase.
+                </p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      {/* TikTok Section */}
+      <section className="relative z-10 px-6 py-20 max-w-7xl mx-auto">
+        <div className="mb-10">
+          <h2 className="text-4xl font-bold">TikTok Reels</h2>
+          <p className="text-gray-400 mt-2">
+            Fast-paced short edits, transitions & viral-style content.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {tiktokVideos.map((video, index) => (
+            <a
+              key={index}
+              href={video.link}
+              target="_blank"
+              className="group bg-white/5 border border-white/10 rounded-3xl overflow-hidden hover:translate-y-[-6px] transition-all duration-300"
+            >
+              <div className="overflow-hidden">
+                <img
+                  src={video.thumbnail}
+                  alt={video.title}
+                  className="w-full h-72 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+
+              <div className="p-6">
+                <h3 className="text-2xl font-bold mb-2">{video.title}</h3>
+                <p className="text-gray-400">
+                  Viral TikTok edit that reached 1 million views.
+                </p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      {/* Services */}
+      <section className="relative z-10 px-6 py-20 max-w-7xl mx-auto">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold mb-4">Services</h2>
+          <p className="text-gray-400 max-w-2xl mx-auto">
+            Available for content editing, livestream branding, cinematic montage,
+            gaming edits, TikTok shorts, and social media visuals.
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {[
+            "Gaming Video Editing",
+            "TikTok Short Content",
+            "Livestream Branding",
+            "Cinematic Montage",
+            "Motion Graphics",
+            "YouTube Thumbnail Design",
+          ].map((service, index) => (
+            <div
+              key={index}
+              className="bg-white/5 border border-white/10 rounded-3xl p-8 hover:border-cyan-400/50 transition-all duration-300"
+            >
+              <div className="w-14 h-14 rounded-2xl bg-gradient-to-r from-cyan-500 to-purple-500 mb-6" />
+              <h3 className="text-2xl font-bold mb-3">{service}</h3>
+              <p className="text-gray-400">
+                High-quality editing with modern and clean visual style.
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="relative z-10 px-6 py-12 border-t border-white/10 text-center">
+        <h2 className="text-3xl font-black mb-3 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-purple-500">
+          DAGERR
+        </h2>
+
+        <p className="text-gray-400 mb-6">
+          Cozy • Clean • Cinematic Editing Experience
+        </p>
+
+        <div className="flex justify-center gap-6">
+          <a
+            href="https://www.youtube.com/@Dagerrrrrrrr"
+            target="_blank"
+            className="hover:text-cyan-400 transition-colors"
+          >
+            YouTube
+          </a>
+
+          <a
+            href="https://www.tiktok.com/@dagerr02"
+            target="_blank"
+            className="hover:text-purple-400 transition-colors"
+          >
+            TikTok
+          </a>
+        </div>
+      </footer>
+    </div>
+  );
+}
